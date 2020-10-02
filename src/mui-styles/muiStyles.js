@@ -14,10 +14,11 @@ export const setStyles = (theme) => ({
 
     list: {
         width: 400,
+        [theme.breakpoints.down('sm')]: {
+            width: '100vw'
+        }
     },
-    fullList: {
-        width: 'auto'
-    },
+
     listHeader: {
         height: '250px',
         backgroundColor: '#7c4dff',
@@ -51,5 +52,19 @@ export const setStyles = (theme) => ({
     contactFormBtn: {
         padding: '11px 29px',
         fontWeight: 'bold'
+    },
+
+    sidebarList: {
+        width: 350,
+        [theme.breakpoints.down('xs')]: {
+            width: '100vw'
+        }
+    },
+    mySvgStyle: {
+        fillColor: theme.palette.primary.main
+    },
+
+    sidebarListItem: {
+        padding: '20px 20px'
     }
 })

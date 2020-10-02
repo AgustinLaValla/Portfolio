@@ -2,14 +2,19 @@ import React, { Fragment, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Fab from '@material-ui/core/Fab';
 import EmailIcon from '@material-ui/icons/Email';
+import Box from '@material-ui/core/Box';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
+import ContactDrawer from '../ContactDrawer/ContactDrawer';
 import Sidebar from '../Sidebar/Sidebar';
 import './Navbar.css';
 
 
 const Navbar = () => {
 
-    const [openSidebar, setOpenSidebar] = useState(false);
+    const [openContactDrawer, setOpenContactDrawer] = useState(false);
     const [contactData, setContactData] = useState({ name: '', email: '', message: '' });
+    const [openSidebar, setOpenSidebar] = useState(false);
     const navLinksText = ['Home', 'About', 'Skills', 'Works', 'Contact']
 
     const handleInputChange = ({ target }) => setContactData({ ...contactData, [target.name]: target.value });
@@ -20,22 +25,40 @@ const Navbar = () => {
                 <div>
                     <img className="navbar__coderIcon" src="images/html-coding.png" alt="" />
                 </div>
-                <ul>
-                    {navLinksText.map(text =>
-                        <li>
-                            <Link className="navbar__link">
-                                {text}
-                            </Link>
-                        </li>
-                    )}
-                </ul>
+                <Box display={{ xs: 'none', md: 'block' }}>
+                    <ul>
+                        {navLinksText.map(text =>
+                            <li>
+                                <Link className="navbar__link">
+                                    {text}
+                                </Link>
+                            </li>
+                        )}
+                    </ul>
+                </Box>
 
-                <Fab color="primary" className="navbar__addIcon" onClick={() => setOpenSidebar(true)}>
-                    <EmailIcon  fontSize="large" />
+                <Box display={{ xs: 'block', md: 'none' }}>
+                    <IconButton style={{ padding: '25px' }} onClick={() => setOpenSidebar(true)}>
+                        <MenuIcon fontSize="large" />
+                    </IconButton>
+                </Box>
+
+                <Fab color="primary" className="navbar__addIcon" onClick={() => setOpenContactDrawer(true)}>
+                    <EmailIcon fontSize="large" />
                 </Fab>
             </div>
 
-            <Sidebar open={openSidebar} handleInputChange={handleInputChange} close={() => setOpenSidebar(false)} />
+            <ContactDrawer
+                open={openContactDrawer}
+                handleInputChange={handleInputChange}
+                close={() => setOpenContactDrawer(false)}
+            />
+
+            <Sidebar
+                open={openSidebar}
+                close={() => setOpenSidebar(false)}
+                navLinksText={navLinksText}
+            />
         </Fragment>
     )
 }

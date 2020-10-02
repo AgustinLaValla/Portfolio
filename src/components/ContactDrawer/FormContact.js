@@ -6,7 +6,7 @@ import Button from '@material-ui/core/Button';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import { setStyles } from '../../mui-styles/muiStyles';
 import { fieldsData } from './FormContactData';
-import './Sidebar.css';
+import './ContactDrawer.css';
 
 const useStyles = makeStyles(theme => setStyles(theme));
 

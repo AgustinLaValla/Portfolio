@@ -51,3 +51,15 @@ ul {
   right: 100px;
   top: 45px;
 }
+
+
+@media screen and (max-width:959px) {
+  .navbar {
+    padding: 0px 15% 0px 10%;
+  }
+
+  .navbar__addIcon {
+    right: 5%;
+  } 
+
+}
