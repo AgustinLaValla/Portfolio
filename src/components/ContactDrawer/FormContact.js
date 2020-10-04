@@ -8,7 +8,7 @@ import { setStyles } from '../../mui-styles/muiStyles';
 import { fieldsData } from './FormContactData';
 import './ContactDrawer.css';
 
-const useStyles = makeStyles(theme => setStyles(theme));
+const useStyles = makeStyles(theme => ({...setStyles(theme)}));
 
 
 const FormContact = ({ handleInputChange }) => {
@@ -20,7 +20,7 @@ const FormContact = ({ handleInputChange }) => {
             <form className="sidebar__contactForm">
 
                 {fieldsData.map(data =>
-                    <Grid container className={classes.formGroupGridContainer}>
+                    <Grid key={data.labelText} container className={classes.formGroupGridContainer} spacing={0}>
                         <Grid item xs={3}>
                             <label htmlFor={data.name}>{data.labelText}</label>
                         </Grid>
@@ -37,7 +37,7 @@ const FormContact = ({ handleInputChange }) => {
                     </Grid>
                 )}
 
-                <Grid container className={classes.formGroupGridContainer}>
+                <Grid container className={classes.formGroupGridContainer} spacing={0}>
                     <Grid item xs={3}></Grid>
                     <Grid item xs={9}>
                         <Button variant="contained" color="primary" className={classes.contactFormBtn}>

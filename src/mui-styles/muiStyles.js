@@ -12,11 +12,26 @@ export const appTheme = {
 
 export const setStyles = (theme) => ({
 
+    tooltip: {
+        fontSize: '16px'
+    },
+
+    root: {
+        color:'#fff'
+    },
+
     list: {
         width: 400,
+        transition: '0.3s',
         [theme.breakpoints.down('sm')]: {
-            width: '100vw'
+            width: '100vw',
+            transition: '0.3s'
         }
+    },
+
+    listFullScreen: {
+        width: '100vw',
+        transition: '0.3s'
     },
 
     listHeader: {
@@ -31,6 +46,14 @@ export const setStyles = (theme) => ({
         position: 'absolute',
         top: 20,
         left: 30,
+        color: '#fff',
+        cursor: 'pointer'
+    },
+
+    listHeaderFullScreenIcon: {
+        position: 'absolute',
+        top: 20,
+        right: 30,
         color: '#fff',
         cursor: 'pointer'
     },
@@ -66,5 +89,67 @@ export const setStyles = (theme) => ({
 
     sidebarListItem: {
         padding: '20px 20px'
+    },
+
+    footer__contactContainer: {
+        '& h4': {
+            color: 'white',
+            marginBottom: 5,
+            textAlign: 'center'
+        },
+        '& h5': {
+            color: 'white',
+            marginBottom: 5,
+            textAlign: 'center'
+        },
+
+    },
+    footer__conenectContainer: {
+        [theme.breakpoints.down('sm')]: {
+            marginTop: 20
+        }
+    },
+
+    home__dataContainer: {
+        height: '105vh',
+        backgroundColor: "#f5f5f5",
+        padding: '0px 20px', 
+    },
+
+    home__dataLeft: {
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: '0px 20px',
+        flex: 'auto auto 50%',
+
+        '& h1': {
+            fontSize: '45px',
+            transform: 'translateY(-30px)',
+
+        },
+        [theme.breakpoints.down('sm')] : {
+            marginTop:50,
+            '& h1': {
+                fontSize: '30px',
+                textAlign:'center',
+                transform: 'translateY(-30px)',
+            },
+        }
+    },
+
+    home__dataRight: {
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'flex-end',
+        alignItems: 'center',
+        padding: '0px 20px',
+
+        flex: 'auto auto 50%',
+        [theme.breakpoints.down('xs')] : {
+            width:'100%'
+        }
     }
+
 })

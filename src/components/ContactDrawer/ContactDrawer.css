@@ -1,113 +1,114 @@
-
 .MuiList-padding {
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-  }
-  
-  .sidebar__imageContainer {
-    position: relative;
-    border-radius: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-  }
-  
-  .sidebar__imageContainer:before {
-    margin: 0;
-    padding: 0;
-    z-index: 100;
-    content: '';
-    border: 4px solid white;
-    border-radius: 100%;
-  
-    position: absolute;
-    top: 0px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-  }
-  
-  .sidebar__profileImage {
-    margin: 0;
-    padding: 0;
-    height: 120px;
-    width: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-  }
-  
-  .sidebar__dataContainer {
-    display: flex;
-  }
-  
-  .sidebar__infoContainer {
-    margin-left: 15px;
-  }
-  
-  .sidebar__infoContainer h1 {
-    color: white;
-  }
-  
-  .sidebar__infoContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
-  .sidebar__infoContainer h1 {
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 15px;
-  }
-  
-  .sidebar__profesionContainer {
-    display: flex;
-    align-items: center;
-  }
-  
-  .sidebar__profesionContainer h3 {
-    font-size: 15px;
-    font-weight: 500;
-    color: white;
-    margin-left: 5px;
-  }
-  
-  .sidebar__codeIcon {
-    width: 30px;
-  }
-  
-  .sidebar__contactForm {
-    margin-top: 30px;
-  }
-  
-  
-  
-  .sidebar__contactForm  label {
-  
-    padding-top: 12px;
-    margin-bottom: 0;
-    margin-right: 10px;  
-    display: inline-block;
-    max-width: 100%;
-    font-size: 14px;
-    line-height: 24px;
-    color: #666;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-  }
-  
-  .sidebar__contactForm .MuiFormControl-root {
-    width: 100%;
-  }
-  .sidebar__contactForm .MuiInputBase-root {
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-    color: #555;
-  }
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
 
+.sidebar__imageContainer {
+  position: relative;
+  border-radius: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.sidebar__imageContainer:before {
+  margin: 0;
+  padding: 0;
+  z-index: 100;
+  content: '';
+  border: 4px solid white;
+  border-radius: 100%;
+
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+
+.sidebar__profileImage {
+  margin: 0;
+  padding: 0;
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.sidebar__dataContainer {
+  display: flex;
+}
+
+.sidebar__infoContainer {
+  margin-left: 15px;
+}
+
+.sidebar__infoContainer h1 {
+  color: white;
+}
+
+.sidebar__infoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sidebar__infoContainer h1 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.sidebar__profesionContainer {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar__profesionContainer h3 {
+  font-size: 15px;
+  font-weight: 500;
+  color: white;
+  margin-left: 5px;
+}
+
+.sidebar__codeIcon {
+  width: 30px;
+}
+
+.sidebar__contactForm {
+  margin-top: 30px;
+}
+
+.sidebar__contactForm label {
+  padding-top: 12px;
+  margin-bottom: 0;
+  margin-right: 10px;
+  display: inline-block;
+  max-width: 100%;
+  font-size: 14px;
+  line-height: 24px;
+  color: #666;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
+
+.sidebar__contactForm .MuiFormControl-root {
+  width: 100%;
+}
+.sidebar__contactForm .MuiInputBase-root {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: #555;
+}
+
+.fullScreen {
+  justify-content: center;
+  width: 100%;
+  transition: 0.3s;
+}
 
 @media screen and (max-width: 959px) {
   .sidebar__dataContainer {

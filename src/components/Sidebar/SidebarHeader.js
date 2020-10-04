@@ -10,7 +10,7 @@ const useStyles = makeStyles(theme => setStyles(theme));
 
 const SidebarHeader = ({ close }) => {
     const classes = useStyles();
-    
+
     return (
         <div className="sidebar__header">
             <ArrowBackIcon className={classes.listHeaderCloseIcon} onClick={close} />
@@ -22,8 +22,12 @@ const SidebarHeader = ({ close }) => {
                     <h1>Agustín La Valla</h1>
                     <h3>agulavalla@gmail.com</h3>
                     <div className="sidebar__icons">
-                        <GitHubIcon fontSize="small" style={{ cursor: 'pointer', marginRight: '10px' }} />
-                        <LinkedInIcon fontSize="small" style={{ cursor: 'pointer' }} />
+                        <a href="https://github.com/AgustinLaValla">
+                            <GitHubIcon classes={{ root: classes.root }} fontSize="small" style={{ cursor: 'pointer', marginRight: '10px' }} />
+                        </a>
+                        <a href="https://www.linkedin.com">
+                            <LinkedInIcon fontSize="small" style={{ cursor: 'pointer' }} classes={{ root: classes.root }} />
+                        </a>
                     </div>
                 </div>
             </div>

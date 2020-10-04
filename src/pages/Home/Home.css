@@ -1,0 +1,10 @@
+
+.home__myPicture {
+    max-height: 630px;
+}
+
+@media screen and (max-width: 959px) {
+    .home__myPicture {
+        max-height: 250px;
+    }
+}

@@ -7,15 +7,17 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import ContactDrawer from '../ContactDrawer/ContactDrawer';
 import Sidebar from '../Sidebar/Sidebar';
+import { contactDrawerContext } from '../../App';
 import './Navbar.css';
 
 
 const Navbar = () => {
 
-    const [openContactDrawer, setOpenContactDrawer] = useState(false);
     const [contactData, setContactData] = useState({ name: '', email: '', message: '' });
     const [openSidebar, setOpenSidebar] = useState(false);
     const navLinksText = ['Home', 'About', 'Skills', 'Works', 'Contact']
+
+    const { openContactDrawer, setOpenContactDrawer } = contactDrawerContext();
 
     const handleInputChange = ({ target }) => setContactData({ ...contactData, [target.name]: target.value });
 
@@ -28,8 +30,8 @@ const Navbar = () => {
                 <Box display={{ xs: 'none', md: 'block' }}>
                     <ul>
                         {navLinksText.map(text =>
-                            <li>
-                                <Link className="navbar__link">
+                            <li key={text}>
+                                <Link className="navbar__link" to={`/${text.toLowerCase()}`}>
                                     {text}
                                 </Link>
                             </li>

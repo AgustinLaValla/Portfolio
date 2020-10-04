@@ -1,19 +1,54 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import CloseIcon from '@material-ui/icons/Close';
 import { setStyles } from '../../mui-styles/muiStyles';
 import ListItem from '@material-ui/core/ListItem';
+import FullscreenIcon from '@material-ui/icons/Fullscreen';
+import FullscreenExitIcon from '@material-ui/icons/FullscreenExit';
+import Tooltip from '@material-ui/core/Tooltip';
 import './ContactDrawer.css';
 
 
-const useStyles = makeStyles(theme => setStyles(theme));
+const useStyles = makeStyles(theme => ({ ...setStyles(theme) }));
 
-const ContactDrawerHeader = ({close}) => {
+const ContactDrawerHeader = ({ close, fullScreen, setFullScreen }) => {
     const classes = useStyles();
+
+    const [showFullScreenIcons, setShowFullScreenIcons] = useState(true);
+
+    const showFullScreenIcon = () => {
+        if (window.innerWidth < 960) {
+            setShowFullScreenIcons(false);
+        } else {
+            setShowFullScreenIcons(true);
+        }
+    }
+
+    useEffect(() => {
+        showFullScreenIcon();
+        return () => { }
+    }, []);
+
+    window.addEventListener('resize', showFullScreenIcon);
+
     return (
         <ListItem className={classes.listHeader}>
             <CloseIcon className={classes.listHeaderCloseIcon} onClick={close} />
-            <div className="sidebar__dataContainer">
+            {
+                showFullScreenIcons && (
+                    fullScreen
+                        ?
+                        <Tooltip title="Exit" classes={{ tooltip: classes.tooltip }}>
+                            <FullscreenExitIcon className={classes.listHeaderFullScreenIcon} onClick={() => setFullScreen(false)} />
+
+                        </Tooltip>
+                        :
+                        <Tooltip title="FullScreen" classes={{ tooltip: classes.tooltip }}>
+                            <FullscreenIcon className={classes.listHeaderFullScreenIcon} onClick={() => setFullScreen(true)} />
+                        </Tooltip>
+                )
+            }
+            <div className={!fullScreen ? 'sidebar__dataContainer' : 'sidebar__dataContainer fullScreen'}>
                 <div className="sidebar__imageContainer">
                     <img src="images/avatar.jpg" className="sidebar__profileImage" alt="Agustín La Valla" />
                 </div>
@@ -26,7 +61,9 @@ const ContactDrawerHeader = ({close}) => {
                 </div>
             </div>
         </ListItem>
-    )
+    );
 }
+
+
 
 export default ContactDrawerHeader;
