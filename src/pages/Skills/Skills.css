@@ -1,0 +1,13 @@
+.skills__title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.skills__svgIcon {
+    fill: white;
+}
+
+.skills__techIcon {
+    width: auto;
+    height: auto;
+}

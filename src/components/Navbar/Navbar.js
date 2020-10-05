@@ -30,11 +30,11 @@ const Navbar = () => {
                 <Box display={{ xs: 'none', md: 'block' }}>
                     <ul>
                         {navLinksText.map(text =>
-                            <li key={text}>
-                                <Link className="navbar__link" to={`/${text.toLowerCase()}`}>
+                            <Link key={text} className="navbar__link" to={`/${text.toLowerCase()}`}>
+                                <li >
                                     {text}
-                                </Link>
-                            </li>
+                                </li>
+                            </Link>
                         )}
                     </ul>
                 </Box>

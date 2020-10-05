@@ -7,6 +7,7 @@ import { createMuiTheme } from '@material-ui/core';
 import ThemeProvider from '@material-ui/styles/ThemeProvider';
 import { appTheme } from './mui-styles/muiStyles';
 import Home from './pages/Home/Home';
+import Skills from './pages/Skills/Skills';
 import './App.css';
 
 const theme = createMuiTheme(appTheme);
@@ -23,6 +24,7 @@ function App() {
             <Navbar />
             <Switch>
               <Route exact path="/home" component={Home} />
+              <Route exact path="/skills" component={Skills} />
               <Redirect to="/home"/>
             </Switch>
             <Footer />

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';  
 import Drawer from '@material-ui/core/Drawer';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import List from '@material-ui/core/List';
@@ -36,11 +37,13 @@ const Sidebar = ({ open, close, navLinksText }) => {
             <List className={classes.sidebarList}>
 
                 <SidebarHeader close={close} />
-                
+
                 {navLinksText.map((text, index) =>
                     <ListItem button key={text} className={classes.sidebarListItem}>
                         <ListItemIcon style={{ color: '#6A1B9A' }}>{icons[index]}</ListItemIcon>
-                        <ListItemText style={{ color: '#6A1B9A' }}>{text}</ListItemText>
+                        <Link to={`/${text.toLowerCase()}`} onClick={close}>
+                            <ListItemText style={{ color: '#6A1B9A' }}>{text}</ListItemText>
+                        </Link>
                     </ListItem>
                 )}
             </List>

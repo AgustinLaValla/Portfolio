@@ -150,6 +150,58 @@ export const setStyles = (theme) => ({
         [theme.breakpoints.down('xs')] : {
             width:'100%'
         }
-    }
+    },
+
+    skillsContainer: {
+        width:'100%',
+        minHeight: '145vh',
+        backgroundColor: "#f5f5f5",
+        padding: '0px 100px', 
+        margin: 0,
+
+        boxSizing: 'border-box',
+        [theme.breakpoints.down('sm')] : {
+            padding: '30px 100px'
+        },
+        [theme.breakpoints.down('xs')] : {
+            padding: '20px 20px'
+        }
+    },
+
+    paper: {
+        width:'100%',
+        minHeight: 780,
+        position: 'relative',
+        boxSizing: 'border-box',
+        padding: '50px 45px'
+    },
+    
+    skils__fabIcon: {
+        position: 'absolute',
+        top: '-25px',
+        left: '50%',
+        transform: 'translateX(-50%)'
+    },
+
+    skills__techIconsContainer : {
+        display: 'grid',
+        gridTemplateColumns: '1fr 1fr 1fr 1fr',
+        gridTemplateRows:'1fr 1fr 1fr 1fr',
+        gridColumnGap: '10px',
+        gridRowGap:'10px',
+        justifyItems:'center',
+        
+
+        [theme.breakpoints.down('lg')]: {
+            gridTemplateColumns: '1fr 1fr 1fr',
+            gridTemplateRows: 'auto'
+        },
+ 
+        [theme.breakpoints.down('xs')] : {
+            gridTemplateColumns: '1fr 1fr',
+            gridTemplateRows: 'auto'
+        },
+    },
+
 
 })
