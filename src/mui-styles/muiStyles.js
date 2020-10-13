@@ -17,7 +17,12 @@ export const setStyles = (theme) => ({
     },
 
     root: {
-        color:'#fff'
+        color: '#fff'
+    },
+
+    navbar__coderIcon: {
+        fontSize: '50px',
+        fill:'#333'
     },
 
     list: {
@@ -113,7 +118,7 @@ export const setStyles = (theme) => ({
     home__dataContainer: {
         height: '105vh',
         backgroundColor: "#f5f5f5",
-        padding: '0px 20px', 
+        padding: '0px 20px',
     },
 
     home__dataLeft: {
@@ -129,11 +134,11 @@ export const setStyles = (theme) => ({
             transform: 'translateY(-30px)',
 
         },
-        [theme.breakpoints.down('sm')] : {
-            marginTop:50,
+        [theme.breakpoints.down('sm')]: {
+            marginTop: 50,
             '& h1': {
                 fontSize: '30px',
-                textAlign:'center',
+                textAlign: 'center',
                 transform: 'translateY(-30px)',
             },
         }
@@ -147,35 +152,35 @@ export const setStyles = (theme) => ({
         padding: '0px 20px',
 
         flex: 'auto auto 50%',
-        [theme.breakpoints.down('xs')] : {
-            width:'100%'
+        [theme.breakpoints.down('xs')]: {
+            width: '100%'
         }
     },
 
     skillsContainer: {
-        width:'100%',
+        width: '100%',
         minHeight: '145vh',
         backgroundColor: "#f5f5f5",
-        padding: '0px 100px', 
+        padding: '0px 100px',
         margin: 0,
 
         boxSizing: 'border-box',
-        [theme.breakpoints.down('sm')] : {
+        [theme.breakpoints.down('sm')]: {
             padding: '30px 100px'
         },
-        [theme.breakpoints.down('xs')] : {
+        [theme.breakpoints.down('xs')]: {
             padding: '20px 20px'
         }
     },
 
     paper: {
-        width:'100%',
+        width: '100%',
         minHeight: 780,
         position: 'relative',
         boxSizing: 'border-box',
         padding: '50px 45px'
     },
-    
+
     skils__fabIcon: {
         position: 'absolute',
         top: '-25px',
@@ -183,25 +188,126 @@ export const setStyles = (theme) => ({
         transform: 'translateX(-50%)'
     },
 
-    skills__techIconsContainer : {
+    skills__techIconsContainer: {
         display: 'grid',
         gridTemplateColumns: '1fr 1fr 1fr 1fr',
-        gridTemplateRows:'1fr 1fr 1fr 1fr',
+        gridTemplateRows: '1fr 1fr 1fr 1fr',
         gridColumnGap: '10px',
-        gridRowGap:'10px',
-        justifyItems:'center',
-        
+        gridRowGap: '10px',
+        justifyItems: 'center',
+
 
         [theme.breakpoints.down('lg')]: {
             gridTemplateColumns: '1fr 1fr 1fr',
             gridTemplateRows: 'auto'
         },
- 
-        [theme.breakpoints.down('xs')] : {
+
+        [theme.breakpoints.down('xs')]: {
             gridTemplateColumns: '1fr 1fr',
             gridTemplateRows: 'auto'
         },
     },
 
+    //About
+    about: {
+        minHeight: '100vh',
+        backgroundColor: "#f5f5f5",
+        padding: '0px 20px 40px',
+    },
+    about__paper: {
+        width: '80%',
+        display: 'box',
+        margin: '0px auto 20px',
+        padding: '35px',
+        transform: 'translateY(30px)'
 
+    },
+    about__fabIcon: {
+        transition: '0.3s',
+        '&:hover': {
+            transform: 'translateY(-4px)'
+        }
+    },
+
+    about__svgIcon: {
+        fill: 'white'
+    },
+
+    about__userDataXs: {
+        textAlign: 'center',
+        flexDirection: 'column',
+        justifyContent: 'center',
+    },
+
+    // --------------------------------- WORKS ---------------------------------
+
+    works: {
+        backgroundColor: '#f5f5f5',
+        minHeight: '100vh',
+        padding: '0px 7.5% 20px',
+    },
+
+    works__card: {
+        padding: '0px 15px',
+        marginTop: 20,
+    },
+
+    works__modalContainer: {
+        overflowY: 'auto',
+    },
+
+    works__modalPaper: {
+        margin:'40px 0px',
+        width: '40%',
+        height:'auto',
+        color: '#868686',
+        fontWeight: 300,
+        backgroundColor: theme.palette.background.paper,
+        boxShadow: theme.shadows[5],
+        border: 'none',
+        outline: 'none',
+        boxSizing: 'border-box',
+        padding: 10,
+        [theme.breakpoints.down('sm')]: {
+            width: '60%',
+        },
+        [theme.breakpoints.down('xs')]: {
+            width: '90%',
+        }
+    },
+
+    works__modalTitle: {
+        color: '#363636',
+        fontSize: 24,
+        lineHeight: '30px',
+        fontWeight: 400,
+        margin: '10px 0',
+        marginTop: '15px'
+    },
+
+    works__modalDescription: {
+        color: '#868686',
+        fontSize: 16,
+        lineHeight: '20px',
+        fontWeight: 300,
+        marginTop: '15px'
+    },
+
+     // ---------------------------------- CONTACT ----------------------------------
+     contact__paper: {
+         width: '60%',
+         display:'block',
+         margin:'0px auto 20px',
+         transform: 'translateY(40px)',
+         [theme.breakpoints.down('sm')] : {
+             width: '80%'
+         },
+         [theme.breakpoints.down('xs')] : {
+            width: '90%'
+        }
+     },
+
+     contact__textField : {
+         margin: '15px 0'
+     }
 })

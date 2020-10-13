@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({ ...setStyles(theme) }));
 const Skills = () => {
     const classes = useStyles();
     return (
-        <Grid container className={classes.skillsContainer} spacing={3} alignItems="center">
+        <Grid container className={`${classes.skillsContainer} animated fadeIn`} spacing={3} alignItems="center">
             <Grid item md={6} xs={12}>
                 <h3 className="skills__title">My Skills</h3>
                 <Paper elevation={3} className={classes.paper}>

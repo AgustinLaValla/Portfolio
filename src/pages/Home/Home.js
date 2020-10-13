@@ -14,7 +14,7 @@ const Home = () => {
     const { setOpenContactDrawer } = contactDrawerContext();
 
     return (
-        <Grid container className={classes.home__dataContainer} spacing={0}>
+        <Grid container className={`${classes.home__dataContainer} animated fadeIn`} spacing={0}>
             <Grid item md={6} sm={12} className={classes.home__dataLeft}>
                 <h1>Hi there! I'm Agustín</h1>
                 <h1 style={{ color: "#7c4dff" }}>Web Developer</h1>

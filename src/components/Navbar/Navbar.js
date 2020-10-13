@@ -8,6 +8,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import ContactDrawer from '../ContactDrawer/ContactDrawer';
 import Sidebar from '../Sidebar/Sidebar';
 import { contactDrawerContext } from '../../App';
+import CoderIcon from './icons/CoderIcon';
 import './Navbar.css';
 
 
@@ -15,7 +16,7 @@ const Navbar = () => {
 
     const [contactData, setContactData] = useState({ name: '', email: '', message: '' });
     const [openSidebar, setOpenSidebar] = useState(false);
-    const navLinksText = ['Home', 'About', 'Skills', 'Works', 'Contact']
+    const navLinksText = ['Home', 'About', 'Skills', 'Works', 'Contact'];
 
     const { openContactDrawer, setOpenContactDrawer } = contactDrawerContext();
 
@@ -25,7 +26,7 @@ const Navbar = () => {
         <Fragment>
             <div className="navbar">
                 <div>
-                    <img className="navbar__coderIcon" src="images/html-coding.png" alt="" />
+                    <CoderIcon />
                 </div>
                 <Box display={{ xs: 'none', md: 'block' }}>
                     <ul>
