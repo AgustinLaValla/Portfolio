@@ -18,7 +18,7 @@ const Home = () => {
             <Grid item md={6} sm={12} className={classes.home__dataLeft}>
                 <h1>Hi there! I'm Agustín</h1>
                 <h1 style={{ color: "#7c4dff" }}>Web Developer</h1>
-                <p>I'm a Web Developer passionate about frontend and backend technologies. I enjoy building everything and I always spend time learning new things in order to improve my skills and provide a better service. If you are interested in hiring me or asking me for a collaboration, you can get in touch with me here.</p>
+                <p> I'm a Web Developer passionate about frontend and backend technologies. I enjoy building everything and learning new technologies.The constancy, responsibility and commitment is everything for me. If you are interested in hiring me or asking me for a collaboration, you can get in touch with me here.</p>
                 <Button
                     variant="contained"
                     color="primary"
@@ -29,7 +29,7 @@ const Home = () => {
                 </Button>
             </Grid>
             <Grid item md={6} sm={12} className={classes.home__dataRight}>
-                <img src="images/enhanced.png" alt="Agustín La Valla" className="home__myPicture"/>
+                <img src="images/enhanced.png" alt="Agustín La Valla" className="home__myPicture" />
             </Grid>
         </Grid>
     )

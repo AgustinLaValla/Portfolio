@@ -60,9 +60,9 @@ const About = () => {
                     <Grid item md={8}>
                         <UserData display={{ xs: 'none', md: 'block' }} />
                         <p className="about__description">
-                         I'm a Web Developer passionate about frontend and backend technologies. I enjoy building everything and I always spend time learning new things to improve my skills and provide a better service. <br/><br/>
-                         With every line of code I try to build high-performance, scalable and mantainable applications that brings an intuitive user experience.<br/><br/>
-                         I am a person very committed to my work, through which I wanted to improve the lives of others.
+                         I'm a Web Developer passionate about frontend and backend technologies. I enjoy building everything and I always dedicate time to expanding my knowledge in order to improve my skills and provide a better service. <br/><br/>
+                         With every line of code I try to build high-performing, scalable and maintainable applications that brings an intuitive user experience<br/><br/>
+                         I am a person very committed to my work, through which I wanted to improve the lives of the others.
                         </p>
                         <Button
                             variant="contained"
