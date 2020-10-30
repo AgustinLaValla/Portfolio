@@ -40,9 +40,9 @@ const Sidebar = ({ open, close, navLinksText }) => {
 
                 {navLinksText.map((text, index) =>
                     <ListItem button key={text} className={classes.sidebarListItem}>
-                        <ListItemIcon style={{ color: '#6A1B9A' }}>{icons[index]}</ListItemIcon>
+                        <ListItemIcon style={{ color: '#7c4dff' }}>{icons[index]}</ListItemIcon>
                         <Link to={`/${text.toLowerCase()}`} onClick={close}>
-                            <ListItemText style={{ color: '#6A1B9A' }}>{text}</ListItemText>
+                            <ListItemText style={{ color: '#7c4dff' }}>{text}</ListItemText>
                         </Link>
                     </ListItem>
                 )}

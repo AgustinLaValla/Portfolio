@@ -11,6 +11,8 @@ import Skills from './pages/Skills/Skills';
 import About from './pages/about/About';
 import Works from './pages/works/Works';
 import Contact from './pages/contact/Contact';
+import MessageModal from './components/MessageModal/MessajeModal';
+import { useDataLayer } from './components/DataLayer/Datalayer'
 import './App.css';
 
 const theme = createMuiTheme(appTheme);
@@ -19,6 +21,7 @@ const AppContext = createContext();
 
 function App() {
   const [openContactDrawer, setOpenContactDrawer] = useState(false);
+  const [{ openModal, message, error }, dispatch] = useDataLayer();
   return (
     <div className="App">
       <Router>
@@ -30,10 +33,16 @@ function App() {
               <Route exact path="/skills" component={Skills} />
               <Route exact path="/about" component={About} />
               <Route exact path="/works" component={Works} />
-              <Route exact path="/contact" component={Contact}/>
+              <Route exact path="/contact" component={Contact} />
               <Redirect to="/home" />
             </Switch>
             <Footer />
+            <MessageModal
+              open={openModal}
+              message={message}
+              error={error}
+              onClose={() => dispatch({ type: 'CLEAR' })}
+            />
           </AppContext.Provider>
         </ThemeProvider>
       </Router>

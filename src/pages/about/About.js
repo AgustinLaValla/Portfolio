@@ -39,7 +39,7 @@ const About = () => {
 
                         <UserData display={{ xs:'flex', md: 'none' }} flexed={true}/>
 
-                        <img style={{ width: '100%' }} src="images/about_image.jpg" alt="Agustín La Valla" />
+                        <img style={{ width: '100%' }} src="images/face.jpg" alt="Agustín La Valla" />
                         {
                             data.map((item, index) => (
                                 <Fragment key={index}>
@@ -59,9 +59,10 @@ const About = () => {
                     </Grid>
                     <Grid item md={8}>
                         <UserData display={{ xs: 'none', md: 'block' }} />
-                        <p className="about__description">  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi tempore et vel voluptas quidem molestiae? Rem quod officia dolor quae esse iure aliquid laboriosam autem, iste unde quia amet ducimus.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi tempore et vel voluptas quidem molestiae? Rem quod officia dolor quae esse iure aliquid laboriosam autem, iste unde quia amet ducimus.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi tempore et vel voluptas quidem molestiae? Rem quod officia dolor quae esse iure aliquid laboriosam autem, iste unde quia amet ducimus.
+                        <p className="about__description">
+                         I'm a Web Developer passionate about frontend and backend technologies. I enjoy building everything and I always spend time learning new things to improve my skills and provide a better service. <br/><br/>
+                         With every line of code I try to build high-performance, scalable and mantainable applications that brings an intuitive user experience.<br/><br/>
+                         I am a person very committed to my work, through which I wanted to improve the lives of others.
                         </p>
                         <Button
                             variant="contained"

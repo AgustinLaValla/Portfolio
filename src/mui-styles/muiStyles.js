@@ -22,7 +22,7 @@ export const setStyles = (theme) => ({
 
     navbar__coderIcon: {
         fontSize: '50px',
-        fill:'#333'
+        fill: '#333'
     },
 
     list: {
@@ -116,9 +116,9 @@ export const setStyles = (theme) => ({
     },
 
     home__dataContainer: {
-        height: '105vh',
+        minHeight: '100vh',
         backgroundColor: "#f5f5f5",
-        padding: '0px 20px',
+        padding: '20px 20px 0px',
     },
 
     home__dataLeft: {
@@ -134,13 +134,22 @@ export const setStyles = (theme) => ({
             transform: 'translateY(-30px)',
 
         },
+
+        '& p': {
+            textAlign: 'justify'
+        },
+
         [theme.breakpoints.down('sm')]: {
             marginTop: 50,
             '& h1': {
                 fontSize: '30px',
                 textAlign: 'center',
-                transform: 'translateY(-30px)',
+                transform: 'translateY(0px)',
             },
+
+            '& p': {
+                marginTop: 30,
+            }
         }
     },
 
@@ -152,6 +161,9 @@ export const setStyles = (theme) => ({
         padding: '0px 20px',
 
         flex: 'auto auto 50%',
+        [theme.breakpoints.down('sm')]: {
+            marginTop: 60
+        },
         [theme.breakpoints.down('xs')]: {
             width: '100%'
         }
@@ -159,9 +171,8 @@ export const setStyles = (theme) => ({
 
     skillsContainer: {
         width: '100%',
-        minHeight: '145vh',
         backgroundColor: "#f5f5f5",
-        padding: '0px 100px',
+        padding: '35px 100px',
         margin: 0,
 
         boxSizing: 'border-box',
@@ -195,7 +206,6 @@ export const setStyles = (theme) => ({
         gridColumnGap: '10px',
         gridRowGap: '10px',
         justifyItems: 'center',
-
 
         [theme.breakpoints.down('lg')]: {
             gridTemplateColumns: '1fr 1fr 1fr',
@@ -244,7 +254,7 @@ export const setStyles = (theme) => ({
     works: {
         backgroundColor: '#f5f5f5',
         minHeight: '100vh',
-        padding: '0px 7.5% 20px',
+        padding: '15px 7.5% 20px',
     },
 
     works__card: {
@@ -257,9 +267,9 @@ export const setStyles = (theme) => ({
     },
 
     works__modalPaper: {
-        margin:'40px 0px',
+        margin: '40px 0px',
         width: '40%',
-        height:'auto',
+        height: 'auto',
         color: '#868686',
         fontWeight: 300,
         backgroundColor: theme.palette.background.paper,
@@ -286,28 +296,30 @@ export const setStyles = (theme) => ({
     },
 
     works__modalDescription: {
-        color: '#868686',
+        color: '#454545',
         fontSize: 16,
         lineHeight: '20px',
         fontWeight: 300,
-        marginTop: '15px'
+        marginTop: '15px',
+        whiteSpace: 'pre-wrap'
     },
 
-     // ---------------------------------- CONTACT ----------------------------------
-     contact__paper: {
-         width: '60%',
-         display:'block',
-         margin:'0px auto 20px',
-         transform: 'translateY(40px)',
-         [theme.breakpoints.down('sm')] : {
-             width: '80%'
-         },
-         [theme.breakpoints.down('xs')] : {
+    // ---------------------------------- CONTACT ----------------------------------
+    contact__paper: {
+        width: '60%',
+        display: 'block',
+        margin: '0px auto 20px',
+        transform: 'translateY(40px)',
+        [theme.breakpoints.down('sm')]: {
+            width: '80%'
+        },
+        [theme.breakpoints.down('xs')]: {
             width: '90%'
         }
-     },
+    },
 
-     contact__textField : {
-         margin: '15px 0'
-     }
+    contact__textField: {
+        margin: '15px 0'
+    },
+
 })

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import CloseIcon from '@material-ui/icons/Close';
 import { setStyles } from '../../mui-styles/muiStyles';
@@ -6,6 +6,7 @@ import ListItem from '@material-ui/core/ListItem';
 import FullscreenIcon from '@material-ui/icons/Fullscreen';
 import FullscreenExitIcon from '@material-ui/icons/FullscreenExit';
 import Tooltip from '@material-ui/core/Tooltip';
+import { useFullScreenIcon } from './hooks/useFullScreenIcon';
 import './ContactDrawer.css';
 
 
@@ -13,23 +14,8 @@ const useStyles = makeStyles(theme => ({ ...setStyles(theme) }));
 
 const ContactDrawerHeader = ({ close, fullScreen, setFullScreen }) => {
     const classes = useStyles();
-
-    const [showFullScreenIcons, setShowFullScreenIcons] = useState(true);
-
-    const showFullScreenIcon = () => {
-        if (window.innerWidth < 960) {
-            setShowFullScreenIcons(false);
-        } else {
-            setShowFullScreenIcons(true);
-        }
-    }
-
-    useEffect(() => {
-        showFullScreenIcon();
-        return () => { }
-    }, []);
-
-    window.addEventListener('resize', showFullScreenIcon);
+    const showFullScreenIcons = useFullScreenIcon();
+    
 
     return (
         <ListItem className={classes.listHeader}>

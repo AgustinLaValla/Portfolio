@@ -24,7 +24,7 @@ const UserData = ({display, flexed}) => {
                         </Fab>
                     </Tooltip>
                 </a>
-                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/agust%C3%ADn-la-valla-7199361b9" target="_blank" rel="noopener noreferrer">
                     <Tooltip title="Linkedin" classes={{ tooltip: classes.tooltip }}>
                         <Fab className={classes.about__fabIcon} size="medium" color="primary">
                             <LinkedinIcon />

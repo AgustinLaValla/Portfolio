@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import './Footer.css';
 import makeStyles from '@material-ui/core/styles/makeStyles';
@@ -10,9 +10,6 @@ const useStyles = makeStyles(theme => ({...setStyles(theme)}));
 const Footer = () => {
     const classes = useStyles();
 
-    useEffect(() => {
-
-    }, []);
     return (
         <Grid container className="footer__container" spacing={0}>
             <Grid item md={4} xs={12} display={{ sm: 'none', md: 'block' }}></Grid>

@@ -63,7 +63,7 @@ const Works = () => {
                                 </Typography>
                                 <div style={{ marginTop: 15 }}>
                                     <Button color="primary" onClick={() => handleOpenModal(work)}>View More</Button>
-                                    <Button color="primary">Live Demo</Button>
+                                    <Button color="primary" href={work.href} target="_blank">Live Demo</Button>
                                 </div>
                             </div>
                         </Paper>

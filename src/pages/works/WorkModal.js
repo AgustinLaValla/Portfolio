@@ -28,12 +28,12 @@ const WorkModal = ({ open, onClose, workData }) => {
             <div style={modalStyle} className={classes.works__modalPaper}>
                 {workData &&
                     <Fragment>
-                        <div className="closeModalIconContainer" style={{cursor:'pointer'}} onClick={onClose}>
-                            <CloseIcon fontSize="small" style={{color:'#333'}}/>
+                        <div className="closeModalIconContainer" style={{ cursor: 'pointer' }} onClick={onClose}>
+                            <CloseIcon fontSize="small" style={{ color: '#333' }} />
                         </div>
 
                         <img src={workData.image} alt={workData.title} className="works__modalImage" />
-                        
+
                         <div className="works__modalDataContainer">
                             {
                                 workData.techs.map((TechIcon, idx) =>
@@ -51,7 +51,17 @@ const WorkModal = ({ open, onClose, workData }) => {
                                 {workData.description}
                             </Typography>
 
-                            <Button variant="contained" color="primary" style={{ marginTop: '20px', display: 'block' }}>Live Preview</Button>
+                            <br/>
+
+                            <Button
+                                variant="contained"
+                                color="primary"
+                                style={{ marginTop: '20px', display: 'inline-block' }}
+                                href={workData.href}
+                                target="_blank"
+                            >
+                                Live Preview
+                            </Button>
 
                         </div>
 

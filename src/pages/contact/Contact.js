@@ -1,33 +1,20 @@
-import React, { useState } from 'react';
+import React, { Fragment } from 'react';
 import Paper from '@material-ui/core/Paper';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import makeStyles from '@material-ui/core/styles/makeStyles';
+import CircularProgress from '@material-ui/core/CircularProgress';
 import { setStyles } from '../../mui-styles/muiStyles';
 import './Contact.css';
+import { useFormikForm } from '../../components/ContactDrawer/hooks/useFormmikForm';
+import { useDataLayer } from '../../components/DataLayer/Datalayer';
 
 const useStyles = makeStyles(theme => ({ ...setStyles(theme) }));
 
-const initialFormState = {
-    name: '',
-    email: '',
-    message: ''
-}
-
 const Contact = () => {
     const classes = useStyles();
-    const [formData, setFormData] = useState(initialFormState);
-
-    const handleInputChange = (ev) => {
-        const { name } = ev.target;
-        const { value } = ev.target;
-        setFormData({ ...formData, [name]: value });
-    }
-
-    const handleSubmit = ev => {
-        ev.preventDefault();
-        console.log(formData);
-    }
+    const [, dispatch] = useDataLayer();
+    const { formik, loading } = useFormikForm({ dispatch });
 
     return (
         <div className="contact__container animated fadeIn">
@@ -37,42 +24,59 @@ const Contact = () => {
                 </div>
                 <img src="images/contact.jpg" alt="Contact with Agustín La Valla" style={{ width: '100%' }} />
                 <div className="contact__formContainer">
-                    <h5>Send me a message using the contact form below</h5>
-                    <form className="contact__form">
+                    <h5>Feel free to contact me for any project</h5>
+                    <form className="contact__form" onSubmit={formik.handleSubmit}>
                         <TextField
-                            id="name"
+                            type="text"
                             name="name"
-                            label="Name"
-                            value={formData.name}
-                            onChange={handleInputChange}
+                            id="name"
+                            value={formik.values.name}
+                            onChange={formik.handleChange}
+                            onBlur={formik.handleBlur}
+                            helperText={formik.errors.name}
+                            error={formik.errors.name && formik.touched.name}
                             className={classes.contact__textField}
                             fullWidth
 
                         />
                         <TextField
-                            id="email"
+                            type="email"
                             name="email"
-                            label="Email"
-                            value={formData.email}
-                            onChange={handleInputChange}
+                            id="email"
+                            value={formik.values.email}
+                            onChange={formik.handleChange}
+                            onBlur={formik.handleBlur}
+                            helperText={formik.errors.email}
+                            error={formik.errors.email && formik.touched.email}
                             className={classes.contact__textField}
                             fullWidth
-
                         />
                         <TextField
-                            id="message"
+                            type="text"
                             name="message"
-                            label="Enter a message"
-                            value={formData.message}
-                            onChange={handleInputChange}
+                            id="message"
+                            value={formik.values.message}
+                            onChange={formik.handleChange}
+                            onBlur={formik.handleBlur}
+                            helperText={formik.errors.message}
+                            error={formik.errors.message && formik.touched.message}
                             className={classes.contact__textField}
                             multiline={true}
                             rows={3}
                             fullWidth
 
                         />
-
-                        <Button variant="contained" color="primary" style={{ margin: '30px 0' }}>Submit</Button>
+                        <Button variant="contained" color="primary" style={{ margin: '30px 0' }} type="submit">
+                            {
+                                loading ?
+                                    <Fragment>
+                                        <CircularProgress color="secondary" color="#fff" style={{ marginRight: 15 }} />
+                                    ...LOADING
+                                </Fragment>
+                                    :
+                                    'SEND MESSAGE'
+                            }
+                        </Button>
                     </form>
                 </div>
             </Paper>

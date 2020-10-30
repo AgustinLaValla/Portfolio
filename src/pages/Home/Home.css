@@ -1,10 +1,10 @@
 
 .home__myPicture {
-    max-height: 630px;
+    max-height: 90vh;
 }
 
 @media screen and (max-width: 959px) {
     .home__myPicture {
-        max-height: 250px;
+        max-height: 55vh;
     }
 }

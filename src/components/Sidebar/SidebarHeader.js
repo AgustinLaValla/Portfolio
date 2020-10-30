@@ -22,10 +22,10 @@ const SidebarHeader = ({ close }) => {
                     <h1>Agustín La Valla</h1>
                     <h3>agulavalla@gmail.com</h3>
                     <div className="sidebar__icons">
-                        <a href="https://github.com/AgustinLaValla">
+                        <a href="https://github.com/AgustinLaValla" target="_blank" style={{cursor: 'pointer'}}>
                             <GitHubIcon classes={{ root: classes.root }} fontSize="small" style={{ cursor: 'pointer', marginRight: '10px' }} />
                         </a>
-                        <a href="https://www.linkedin.com">
+                        <a href="https://www.linkedin.com/in/agust%C3%ADn-la-valla-7199361b9/" target="_blank" style={{cursor: 'pointer'}}>
                             <LinkedInIcon fontSize="small" style={{ cursor: 'pointer' }} classes={{ root: classes.root }} />
                         </a>
                     </div>
