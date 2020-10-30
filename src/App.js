@@ -29,7 +29,7 @@ function App() {
           <AppContext.Provider value={{ openContactDrawer, setOpenContactDrawer }}>
             <Navbar />
             <Switch>
-              <Route exact path="/home" component={Home} />
+              <Route exact path="/" component={Home} />
               <Route exact path="/skills" component={Skills} />
               <Route exact path="/about" component={About} />
               <Route exact path="/works" component={Works} />
