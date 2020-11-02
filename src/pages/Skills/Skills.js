@@ -35,7 +35,7 @@ const Skills = () => {
             </Grid>
 
             <Grid item md={6} xs={12}>
-                <h3 className="skills__title">Technologies that I use</h3>
+                <h3 className="skills__title">Technologies I use</h3>
                 <Paper elevation={3} className={`${classes.paper} ${classes.skills__techIconsContainer}`} id="iconsContainer">
                     <Fab color="primary" className={classes.skils__fabIcon}>
                         <SvgIcon fontSize="large">
