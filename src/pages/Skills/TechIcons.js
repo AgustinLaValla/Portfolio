@@ -17,6 +17,7 @@ import { ReactComponent as FirebaseIcon } from './icons/firebase.svg';
 import { ReactComponent as HtmlIcon } from './icons/html5.svg';
 import { ReactComponent as CssIcon } from './icons/css-3.svg';
 import { ReactComponent as BootstrapIcon } from './icons/bootstrap-4.svg';
+import { ReactComponent as MySqlSvg } from './icons/mysql.svg';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import { setStyles } from '../../mui-styles/muiStyles';
 
@@ -37,6 +38,7 @@ const TechIcons = () => {
         <ExpressIcon className="skills__techIcon"/>,
         <NestIcon className="skills__techIcon"/>,
         <MongoDbIcon className="skills__techIcon"/>,
+        <MySqlSvg className="skills__techIcon"/>,
         <FirebaseIcon className="skills__techIcon"/>,
         <SocketIcon  className="skills__techIcon"/>,
         <MuiIcon className="skills__techIcon"/>,

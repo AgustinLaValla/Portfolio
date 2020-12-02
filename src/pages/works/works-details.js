@@ -10,6 +10,8 @@ import { ReactComponent as ReactSvg } from './icons/react.svg';
 import { ReactComponent as SocketIoSvg } from './icons/socket-io.svg';
 import { ReactComponent as MaterialUiSvg } from './icons/material-ui.svg';
 import { ReactComponent as FirebaseSvg } from './icons/firebase.svg';
+import { ReactComponent as MySqlSvg } from './icons/mysql.svg'
+import { ReactComponent as TypescriptSvg } from './icons/typescript.svg';
 
 export const worksDetails = [
     {
@@ -44,6 +46,21 @@ It's full responsive, so that is completely adaptable to any device viewport.`,
             <SocketIoSvg />
         ],
         href: 'https://angular-social-chat-app.vercel.app'
+    },
+    {
+        title: "What's app Clone",
+        description: `This is application built in React and Typescript on the frontend, and Node.js TypeOrm, Mysql and SocketIo on the backend. It has cool features such as a UI similar to the What's app. You can chat in real-time basis due to the implementation of Sockets.
+So far it's not full responsive, but I'll work on that soon.`,
+        image: 'images/whatsappclone.png',
+        techs: [
+            <ReactSvg />,
+            <TypescriptSvg />,
+            <NodejsSvg />,
+            <ExpressSvg />,
+            <MySqlSvg />,
+            <SocketIoSvg />
+        ],
+        href: 'https://whats-app-clone-sigma.vercel.app'
     },
     {
         title: `React Social Chat Networking`,
